@@ -16,7 +16,7 @@
 
 	<div class="container">
 		<c:if test="${book != null}">
-			<form name="book_form" method="post" action="edit">
+			<form name="book_form" method="post" action="update">
 				<h2>Edit Book Form</h2>
 				<p>
 					<label>Title:</label> <input type="text" name="booktitle" value="<c:out value="${book.title}" />" />
@@ -27,7 +27,7 @@
 				<p>
 					<label>Price:</label> <input type="text" name="bookprice" value="<c:out value="${book.price}" />" />
 				</p>
-				<input type="hidden" value="<c:out value="${book.id}" />" />
+				<input type="hidden" name="id" value="<c:out value="${book.id}" />" />
 				<p>
 					<input type="submit" value="Submit"/>
 				</p>
