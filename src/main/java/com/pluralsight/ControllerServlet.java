@@ -64,12 +64,14 @@ public class ControllerServlet extends HttpServlet {
 			case "/edit":
 				showEditForm(request, response);
 				break;
+			case "/update":
+				updateBook(request, response);
+				break;
 			default:
 				listBooks(request, response);
 				break;
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -125,6 +127,19 @@ public class ControllerServlet extends HttpServlet {
 		request.setAttribute("book", book);
 		request.getRequestDispatcher("/BookForm.jsp").forward(request, response);
 	}
+	
+	private void updateBook(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, ClassNotFoundException, SQLException {
+		String title = request.getParameter("booktitle");
+		String author = request.getParameter("bookauthor");
+		String priceString = request.getParameter("bookprice");
+		int id = Integer.parseInt(request.getParameter("id"));
+
+		Book newBook = new Book(id, title, author, Float.parseFloat(priceString));
+
+		bookDAO.updateBook(newBook);
+		response.sendRedirect("list");
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
@@ -132,7 +147,6 @@ public class ControllerServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
 		out.println("This is the doPost() method!");
 		doGet(request, response);
