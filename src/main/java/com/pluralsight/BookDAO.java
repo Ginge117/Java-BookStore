@@ -90,7 +90,7 @@ public class BookDAO {
 	}
 	
 	public boolean updateBook(Book book) {
-		String sql = "UPDATE book SET title=?, author=?, price=? WHERE id=?";
+		String sql = "UPDATE book SET title = ?, author = ?, price = ? WHERE id = ?";
 
 		try {
 			PreparedStatement statement = jdbcConnection.prepareStatement(sql);
