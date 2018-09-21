@@ -6,18 +6,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.Before;
 import org.mockito.Mockito;
 import org.junit.runner.RunWith;
-import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.lang.reflect.Method;
-
-import java.io.*;
 
 
 @RunWith(PowerMockRunner.class)

@@ -1,13 +1,10 @@
 package com.pluralsight.module1;
-import com.pluralsight.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.WebResponse;
 import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 

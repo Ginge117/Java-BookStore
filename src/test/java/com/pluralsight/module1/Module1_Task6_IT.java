@@ -6,17 +6,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 import org.junit.runner.RunWith;
-import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.lang.reflect.Method;
-
-import java.io.*;
 
 
 @RunWith(PowerMockRunner.class)
@@ -53,7 +50,7 @@ public class Module1_Task6_IT {
       } catch (Exception e) {}
 
       try {
-        Mockito.verify(mockStatement, Mockito.atLeast(1)).setInt(Mockito.anyInt(), Mockito.anyInt());
+        Mockito.verify(mockStatement, Mockito.atLeast(1)).setInt(ArgumentMatchers.anyInt(), ArgumentMatchers.anyInt());
         called_setInt = true;
         Mockito.verify(mockStatement, Mockito.atLeast(1)).executeUpdate();
         called_execute = true;

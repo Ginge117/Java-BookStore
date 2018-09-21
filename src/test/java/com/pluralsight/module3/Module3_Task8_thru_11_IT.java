@@ -10,10 +10,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.lang.reflect.Method;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
-import org.junit.BeforeClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

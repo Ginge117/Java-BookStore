@@ -5,10 +5,6 @@ import static org.junit.Assert.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
-import org.junit.BeforeClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -21,8 +17,6 @@ import org.powermock.reflect.exceptions.*;
 
 import org.powermock.reflect.Whitebox;
 import java.lang.reflect.Method;
-
-import java.io.*;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(ControllerServlet.class)

@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import java.lang.reflect.Method;
-import java.io.*;
 
 public class Module1_Task4_IT {
 
